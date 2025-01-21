@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: #FFA500;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: #000000;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #000000;
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffff;
+            border-radius: 20px;
+        }
+
+        .hero {
+            background-image: url('bee (7).jpg');
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffff;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ffff;
+        }
+
+        .cta-button {
+            background-color: #ffc400;
+            color: #000000;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #FF8C00;
+            transform: scale(1.1);
+        }
+
+        .shop-products {
+            background-color: #FFF8DC;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: #FFF;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .product-card p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .cart-section {
+            padding: 2rem;
+            background-color: #FFF8DC;
+            text-align: center;
+        }
+
+        .cart-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 1rem;
+            background: #fff;
+        }
+
+        #cartItems {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem 0;
+        }
+
+        #cartItems li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SALMA GLOBAL FARMS</div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                
+            </div>
+        </nav>
+    </header>
+
+
+
+    <section class="shop-products" id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="bee4.jpg" alt="Natural Honey Jar">
+                <h3>Pure Natural Honey</h3>
+                <p>Rich, raw, and 100% pure honey harvested sustainably.</p>
+                <p><strong>₦5,000</strong></p>
+                <button class="cta-button" onclick="addToCart('Pure Natural Honey', 5000)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="bee (11).jpg" alt="Fresh Honeycomb">
+                <h3>Fresh Honeycomb</h3>
+                <p>Enjoy the freshest, most natural form of honey.</p>
+                <p><strong>₦7,500</strong></p>
+                <button class="cta-button" onclick="addToCart('Fresh Honeycomb', 7500)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="bee (5).jpg" alt="Bee Pollen">
+                <h3>Bee Pollen</h3>
+                <p>A nutrient-rich superfood for your healthy lifestyle.</p>
+                <p><strong>₦3,500</strong></p>
+                <button class="cta-button" onclick="addToCart('Bee Pollen', 3500)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cart-section" id="cart">
+        <h2>Your Cart</h2>
+        <div class="cart-container">
+            <ul id="cartItems"></ul>
+            <div class="cart-total">
+                <strong>Total: ₦<span id="cartTotal">0</span></strong>
+            </div>
+        </div><br>
+        <button class="cta-button" style="color: #000000;">Pay Now</button>
+    </section>
+
+    <!---Another cart Section -->
+    
+
+    <footer class="footer">
+        <p>&copy; 2024 Salma Global Farms and Agro Allied. All rights reserved.</p>
+        <p style="color: #FFA500;">Developed By Basiru Lawan Tudun Wada (WEB LEARNER)</p>
+    </footer>
+
+    <script>
+        const cart = [];
+
+        function addToCart(productName, productPrice) {
+            cart.push({ name: productName, price: productPrice });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                total += item.price;
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ₦${item.price}`;
+                cartItems.appendChild(li);
+            });
+
+            cartTotal.textContent = total;
+        }
+    </script>
+</body>
+</html>

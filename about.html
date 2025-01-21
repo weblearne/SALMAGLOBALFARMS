@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Previous styles remain the same -->
+    <style>
+        /* Add these new styles */
+        .blog-section {
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: #FFF8DC;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog img {
+            height: 30px;
+            width: 100px;
+        
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .about-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/600');
+            color: white;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content {
+            padding: 2rem;
+        }
+
+        .about-image {
+            height: 50px;
+            width: 50px;
+        
+        }
+
+        .news-ticker {
+            background-color: #472800;
+            color: white;
+            padding: 1rem 0;
+            overflow: hidden;
+        }
+
+        .ticker-content {
+            white-space: nowrap;
+            animation: ticker 20s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .stats-section {
+            padding: 4rem 2rem;
+            background-color: #FFF8DC;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: #FFA500;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 50px;
+                width: 50px;
+            }
+        }
+        .shamoor{
+            height: 250px;
+            width: 250px;
+            border-radius: 20px;
+            margin-left:;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .button2{
+            border: none;
+            width: 100px;
+            height:30px;
+            background: #FF8C00;
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .button2:hover{
+            background-color: #FF8C00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Previous sections remain the same -->
+
+    <div class="news-ticker">
+        <div class="ticker-content">
+            🍯 New Harvest Season Starting Soon! | 🌿 Join Our Beekeeping Workshop | 🎖️ Winner of Best Organic Honey 2024 | 🐝 Supporting Local Bee Communities
+        </div>
+    </div>
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title" style="color: #FF8C00;">Our Story</h2>
+                <p>Founded by Shamsu Lawan, Salma Global Farms has been dedicated to producing the finest quality honey while maintaining sustainable beekeeping practices. Our journey began with a simple mission: to provide pure, natural honey while protecting our precious bee population.</p>
+                <br>
+                <p>Today, we manage over 1000 bee colonies across various locations, ensuring the preservation of different honey varieties and supporting local ecosystems.</p>
+                <button class="button2">Learn More About Us</button>
+            </div>
+            <div class="about-image">
+                <img  class="shamoor" src="shamoor.jpeg" alt="SHAMSU LAWAN">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">1000+</div>
+                <p>Bee Colonies</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50,000+</div>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <p>Natural & Pure</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+            <h2 class="section-title">Latest From Our Blog</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img class="blog img" src="bee (10).jpg" alt="" height="300px" width="400px">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">December 20, 2024</p>
+                        <h3>The Benefits of Raw Honey</h3>
+                        <p>Discover why raw honey is nature's best sweetener and its numerous health benefits.</p>
+                        <button class="button2">Read More</button>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img class="blog img" src="bee (2).jpg" alt="" height="300px" width="400px">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">December 15, 2024</p>
+                        <h3>Sustainable Beekeeping</h3>
+                        <p>Learn about our practices that help protect bee populations and the environment.</p>
+                        <button class="button2">Read More</button>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img class="blog img" src="bee (5).jpg" alt="" height="300px" width="400px">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-date">December 10, 2024</p>
+                        <h3>Honey in Cooking</h3>
+                        <p>Explore creative ways to use honey in your cooking and baking adventures.</p>
+                        <button class="button2">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Previous JavaScript remains the same
+
+        // Add animation for statistics
+        const stats = document.querySelectorAll('.stat-number');
+        
+        const observerStats = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    
+                    // Add counting animation
+                    const target = parseInt(entry.target.innerText);
+                    let count = 0;
+                    const duration = 2000; // 2 seconds
+                    const increment = target / (duration / 16); // 60fps
+
+                    const updateCount = () => {
+                        count += increment;
+                        if(count < target) {
+                            entry.target.innerText = Math.ceil(count) + (entry.target.innerText.includes('+') ? '+' : '');
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            entry.target.innerText = target + (entry.target.innerText.includes('+') ? '+' : '');
+                        }
+                    };
+
+                    updateCount();
+                }
+            });
+        });
+
+        stats.forEach(stat => {
+            stat.style.opacity = '0';
+            stat.style.transform = 'translateY(20px)';
+            stat.style.transition = 'all 0.6s ease-out';
+            observerStats.observe(stat);
+        });
+
+        // Add blog card hover effects
+        document.querySelectorAll('.blog-card').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Salma Global Farms and Agro Allied. All rights reserved.</p>
+    </div>
+   <span> <div class="container">
+        
+        <p style="color: #FFA500; font-family: VerdanaGeneva;">Developed By Basiru Lawan Tudun Wada (WEB LEARNER)</p>
+    </div></span>
+</footer>
+</body>
+</html>

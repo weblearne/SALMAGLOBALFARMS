@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Salma Global Farms & Agro Allied</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: #FFA500;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            
+        }
+
+        .logo {
+            color: #000000;
+            font-size: 1.5rem;
+            font-weight: bold;
+      
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #472800;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-hero {
+            background-color: #FFF8DC;
+            padding: 120px 0 60px 0;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            color:#FFA500;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-hero p {
+            color: #000000;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .contact-section {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            color: #472800;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .info-item {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            color: #FFA500;
+            min-width: 40px;
+        }
+
+        .info-content h3 {
+            color: #472800;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .info-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            margin-top: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: #472800;
+            font-size: 2rem;
+            text-decoration: none;
+            background-color: #FFF8DC;
+            padding: 1rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #FFA500;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            margin-top: 3rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .business-hours {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #FFF8DC;
+            border-radius: 10px;
+        }
+
+        .business-hours h3 {
+            color: #472800;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #FFA500;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SALMA GLOBAL FARMS</div>
+            
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you! Visit our farm, call us, or connect through our social media channels.</p>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-grid">
+            <div class="contact-section">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div class="info-content">
+                        <h3>Visit Our Farm</h3>
+                        <p>No. 23 Tsohon Gari Garejin Soja, Tudun Wada Local Goverment<br>Kano State, Nigeria</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <div class="info-content">
+                        <h3>Call Us</h3>
+                        <p>Phone: +234 803 884 8285<br>WhatsApp: +234 803 058 9718</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">✉️</span>
+                    <div class="info-content">
+                        <h3>Email Us</h3>
+                        <p>info@salmaglobalfarms.com<br>shamsulawan3@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2>Business Hours</h2>
+                <div class="hours-grid">
+                    <div class="hours-item">
+                        <span>Monday</span>
+                        <span>9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Tuesday</span>
+                        <span>9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Wednesday</span>
+                        <span>9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Thursday</span>
+                        <span>9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Friday</span>
+                        <span>9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Saturday</span>
+                        <span>10:00 AM - 2:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Sunday</span>
+                        <span>Closed</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://web.facebook.com/Comradeshamsu/" title="Facebook"><img src="facebook.png" alt="" width="50" height="50"></a>
+                    <a href="twitter.com/i m shamsu lawan" title="Twitter"><img src="x.png" alt="" width="50" height="50"></a>
+                    <a href="https://www.instagram.com/comrade_shamsu/" title="Instagram"><img src="instagram.jpg" alt="" width="50" height="50"></a>
+                    <a href="https://wa.me/08030589718" title="WhatsApp"><img src="whatsapp.png" alt="" width="50" height="50"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <img src="bee (9).jpg" alt="" width="1200" height="500">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Salma Global Farms and Agro Allied. All rights reserved.</p>
+        </div>
+        <span>
+            <div class="container">
+                <p style="color: #FFA500; font-family: VerdanaGeneva;">Developed By Basiru Lawan Tudun Wada (WEB LEARNER)</p>
+            </div>
+        </span>
+    </footer>
+
+    <script>
+        // Add hover effects for social links
+        document.querySelectorAll('.social-links a').forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.transform = 'scale(1.1) translateY(-5px)';
+                link.style.transition = 'all 0.3s ease';
+            });
+            
+            link.addEventListener('mouseout', () => {
+                link.style.transform = 'scale(1) translateY(0)';
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
